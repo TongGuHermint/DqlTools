@@ -20,7 +20,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author Vondear
+ * @author dql
+ * @date 2018/4/12
  *
  * Numeric wheel view.
  */

@@ -2,8 +2,8 @@ package com.example.dql.dqldialogtools.DqlTools;
 
 /**
  *
- * @author vondear
- * @date 2016/1/24
+ * @author dql
+ * @date 2018/4/12
  * 常量工具类
  */
 public class DqlConstTool {

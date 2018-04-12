@@ -65,9 +65,8 @@ import static com.example.dql.dqldialogtools.DqlTools.DqlConstTool.KB;
 //import android.util.Log;
 
 /**
- * Created in Sep 10, 2016 4:22:18 PM.
- *
- * @author Vondear.
+ * @author dql
+ * @date 2018/4/12
  */
 public class DqlFileTool {
 

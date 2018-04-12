@@ -18,8 +18,8 @@ import static com.example.dql.dqldialogtools.DqlTools.DqlDataTool.hexString2Byte
 
 /**
  *
- * @author vondear
- * @date 2016/1/24
+ * @author dql
+ * @date 2018/4/12
  * 加密解密相关的工具类
  */
 public class DqlEncryptTool {

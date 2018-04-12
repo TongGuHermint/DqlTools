@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  */
 public class DateArrayAdapter extends ArrayWheelAdapter<String> {
 	// Index of current item

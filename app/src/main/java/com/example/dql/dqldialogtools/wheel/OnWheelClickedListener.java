@@ -1,7 +1,8 @@
 package com.example.dql.dqldialogtools.wheel;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * Wheel clicked listener interface.
  * <p>The onItemClicked() method is called whenever a wheel item is clicked
  * <li> New Wheel position is set

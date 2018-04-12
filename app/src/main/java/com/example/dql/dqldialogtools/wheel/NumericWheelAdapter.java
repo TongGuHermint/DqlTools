@@ -3,7 +3,8 @@ package com.example.dql.dqldialogtools.wheel;
 import android.content.Context;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * Numeric Wheel adapter.
  */
 public class NumericWheelAdapter extends AbstractWheelTextAdapter {

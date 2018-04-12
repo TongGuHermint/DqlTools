@@ -21,8 +21,8 @@ import static com.example.dql.dqldialogtools.DqlTools.DqlDataTool.stringToInt;
 
 /**
  *
- * @author vondear
- * @date 2016/1/24
+ * @author dql
+ * @date 2018/4/12
  * 时间相关工具类
  */
 public class DqlTimeTool {

@@ -10,7 +10,8 @@ import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * Scroller class handles scrolling events and updates the
  */
 public class WheelScroller {

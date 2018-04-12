@@ -34,8 +34,8 @@ import static com.example.dql.dqldialogtools.DqlTools.DqlFileTool.isMediaDocumen
 
 /**
  *
- * @author vondear
- * @date 2016/1/24
+ * @author dql
+ * @date 2018/4/12
  */
 
 public class DqlPhotoTool {

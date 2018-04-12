@@ -1,7 +1,8 @@
 package com.example.dql.dqldialogtools.wheel;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * Wheel changed listener interface.
  * <p>The onChanged() method is called whenever current wheel positions is changed:
  * <li> New Wheel position is set

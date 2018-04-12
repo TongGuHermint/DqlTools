@@ -5,7 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * Wheel items adapter interface
  */
 public interface WheelViewAdapter {

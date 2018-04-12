@@ -1,7 +1,8 @@
 package com.example.dql.dqldialogtools.wheel;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  * @deprecated Use WheelViewAdapter
  *
  * Wheel adapter interface

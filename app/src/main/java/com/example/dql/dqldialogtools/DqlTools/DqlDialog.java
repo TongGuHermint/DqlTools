@@ -11,7 +11,8 @@ import android.view.WindowManager.LayoutParams;
 import com.example.dql.dqldialogtools.R;
 
 /**
- * @author vondear
+ * @author dql
+ * @date 2018/4/12
  */
 public class DqlDialog extends Dialog {
 
