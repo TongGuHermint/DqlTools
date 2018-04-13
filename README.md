@@ -22,32 +22,33 @@ dependencies {
 
 ```
 // --------------------------------选择日期开始
-		mDqlDialogWheelYearMonthDay = new DqlDialogWheelYearMonthDay(this, 1994, 2017);
-		mDqlDialogWheelYearMonthDay.getSureView().setOnClickListener(
-				new View.OnClickListener() {
+mDqlDialogWheelYearMonthDay = new DqlDialogWheelYearMonthDay(this, 1994, 2017);
+mDqlDialogWheelYearMonthDay.getSureView().setOnClickListener(
+		new View.OnClickListener() {
 
-					@Override
-					public void onClick(View arg0) {
-						if (mDqlDialogWheelYearMonthDay.getCheckBoxDay().isChecked()) {
-							btnDateDialog.setText(
-									mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
-											+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月"
-											+ mDqlDialogWheelYearMonthDay.getSelectorDay() + "日");
-						} else {
-							btnDateDialog.setText(
-									mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
-											+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月");
+			@Override
+			public void onClick(View arg0) {
+				if (mDqlDialogWheelYearMonthDay.getCheckBoxDay().isChecked()) {
+					btnDateDialog.setText(
+						mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
+							+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月"
+							+ mDqlDialogWheelYearMonthDay.getSelectorDay() + "日");
+				} else {
+					btnDateDialog.setText(
+						mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
+						+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月");
 						}
-						mDqlDialogWheelYearMonthDay.cancel();
-					}
+					mDqlDialogWheelYearMonthDay.cancel();
+				}
 				});
-		mDqlDialogWheelYearMonthDay.getCancleView().setOnClickListener(
-				new View.OnClickListener() {
+mDqlDialogWheelYearMonthDay.getCancleView().setOnClickListener(
+		new View.OnClickListener() {
 
-					@Override
-					public void onClick(View arg0) {
-						mDqlDialogWheelYearMonthDay.cancel();
-					}
-				});
-		// ---------------------------选择日期结束
+			@Override
+			public void onClick(View arg0) {
+				mDqlDialogWheelYearMonthDay.cancel();
+				}
+		});
+//--------------------------------选择日期结束
+
 ```
