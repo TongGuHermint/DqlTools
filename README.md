@@ -60,7 +60,6 @@ dqlDialogSure.getSureView().setOnClickListener(new View.OnClickListener() {
 	}
 });
 dqlDialogSure.show();
-}
 
 ```
 确定取消弹框
