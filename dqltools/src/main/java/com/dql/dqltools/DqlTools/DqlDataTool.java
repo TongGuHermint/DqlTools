@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -19,11 +19,6 @@ import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.Locale;
 import java.util.Map;
-
-import static com.example.dqltools.DqlTools.DqlConstTool.BYTE;
-import static com.example.dqltools.DqlTools.DqlConstTool.GB;
-import static com.example.dqltools.DqlTools.DqlConstTool.KB;
-import static com.example.dqltools.DqlTools.DqlConstTool.MB;
 
 
 /**
@@ -632,13 +627,13 @@ public class DqlDataTool {
         switch (unit) {
             default:
             case BYTE:
-                return (double) byteNum / BYTE;
+                return (double) byteNum / DqlConstTool.BYTE;
             case KB:
-                return (double) byteNum / KB;
+                return (double) byteNum / DqlConstTool.KB;
             case MB:
-                return (double) byteNum / MB;
+                return (double) byteNum / DqlConstTool.MB;
             case GB:
-                return (double) byteNum / GB;
+                return (double) byteNum / DqlConstTool.GB;
         }
     }
 
@@ -661,13 +656,13 @@ public class DqlDataTool {
         switch (unit) {
             default:
             case BYTE:
-                return size * BYTE;
+                return size * DqlConstTool.BYTE;
             case KB:
-                return size * KB;
+                return size * DqlConstTool.KB;
             case MB:
-                return size * MB;
+                return size * DqlConstTool.MB;
             case GB:
-                return size * GB;
+                return size * DqlConstTool.GB;
         }
     }
 
@@ -681,14 +676,14 @@ public class DqlDataTool {
     public static String byte2FitSize(long byteNum) {
         if (byteNum < 0) {
             return "shouldn't be less than zero!";
-        } else if (byteNum < KB) {
+        } else if (byteNum < DqlConstTool.KB) {
             return String.format(Locale.getDefault(), "%.3fB", (double) byteNum);
-        } else if (byteNum < MB) {
-            return String.format(Locale.getDefault(), "%.3fKB", (double) byteNum / KB);
-        } else if (byteNum < GB) {
-            return String.format(Locale.getDefault(), "%.3fMB", (double) byteNum / MB);
+        } else if (byteNum < DqlConstTool.MB) {
+            return String.format(Locale.getDefault(), "%.3fKB", (double) byteNum / DqlConstTool.KB);
+        } else if (byteNum < DqlConstTool.GB) {
+            return String.format(Locale.getDefault(), "%.3fMB", (double) byteNum / DqlConstTool.MB);
         } else {
-            return String.format(Locale.getDefault(), "%.3fGB", (double) byteNum / GB);
+            return String.format(Locale.getDefault(), "%.3fGB", (double) byteNum / DqlConstTool.GB);
         }
     }
 
@@ -704,9 +699,9 @@ public class DqlDataTool {
         }
         try {
             ByteArrayOutputStream os = new ByteArrayOutputStream();
-            byte[] b = new byte[KB];
+            byte[] b = new byte[DqlConstTool.KB];
             int len;
-            while ((len = is.read(b, 0, KB)) != -1) {
+            while ((len = is.read(b, 0, DqlConstTool.KB)) != -1) {
                 os.write(b, 0, len);
             }
             return os;

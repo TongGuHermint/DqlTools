@@ -1,4 +1,4 @@
-package com.example.dqltools.wheel;
+package com.dql.dqltools.wheel;
 
 import android.view.View;
 import android.widget.LinearLayout;

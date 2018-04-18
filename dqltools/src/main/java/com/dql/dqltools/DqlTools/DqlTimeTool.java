@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.annotation.SuppressLint;
 import android.util.Log;
@@ -9,14 +9,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
-
-import static com.example.dqltools.DqlTools.DqlConstTool.DAY;
-import static com.example.dqltools.DqlTools.DqlConstTool.HOUR;
-import static com.example.dqltools.DqlTools.DqlConstTool.MIN;
-import static com.example.dqltools.DqlTools.DqlConstTool.MSEC;
-import static com.example.dqltools.DqlTools.DqlConstTool.SEC;
-import static com.example.dqltools.DqlTools.DqlDataTool.isNullString;
-import static com.example.dqltools.DqlTools.DqlDataTool.stringToInt;
 
 
 /**
@@ -320,15 +312,15 @@ public class DqlTimeTool {
     private static long milliseconds2Unit(long milliseconds, DqlConstTool.TimeUnit unit) {
         switch (unit) {
             case MSEC:
-                return milliseconds / MSEC;
+                return milliseconds / DqlConstTool.MSEC;
             case SEC:
-                return milliseconds / SEC;
+                return milliseconds / DqlConstTool.SEC;
             case MIN:
-                return milliseconds / MIN;
+                return milliseconds / DqlConstTool.MIN;
             case HOUR:
-                return milliseconds / HOUR;
+                return milliseconds / DqlConstTool.HOUR;
             case DAY:
-                return milliseconds / DAY;
+                return milliseconds / DqlConstTool.DAY;
         }
         return -1;
     }
@@ -506,7 +498,7 @@ public class DqlTimeTool {
      * @return
      */
     public static String simpleDateFormat(String format, Date date) {
-        if (isNullString(format)) {
+        if (DqlDataTool.isNullString(format)) {
             format = "yyyy-MM-dd HH:mm:ss";
         }
         String content = new SimpleDateFormat(format).format(date);
@@ -578,7 +570,7 @@ public class DqlTimeTool {
      */
     @SuppressLint("SimpleDateFormat")
     public static String getDate(String times, String format) {
-        return simpleDateFormat(format, new Date(stringToInt(times) * 1000L));
+        return simpleDateFormat(format, new Date(DqlDataTool.stringToInt(times) * 1000L));
     }
 
     /**

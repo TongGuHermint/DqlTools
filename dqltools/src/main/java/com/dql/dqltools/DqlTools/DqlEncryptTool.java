@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,10 +11,6 @@ import java.security.SecureRandom;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
-
-import static com.example.dqltools.DqlTools.DqlDataTool.bytes2HexString;
-import static com.example.dqltools.DqlTools.DqlDataTool.hexString2Bytes;
 
 
 /**
@@ -68,7 +64,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptMD2ToString(byte[] data) {
-        return bytes2HexString(encryptMD2(data));
+        return DqlDataTool.bytes2HexString(encryptMD2(data));
     }
 
     /**
@@ -99,7 +95,7 @@ public class DqlEncryptTool {
      * @return 16进制加盐密文
      */
     public static String encryptMD5ToString(String data, String salt) {
-        return bytes2HexString(encryptMD5((data + salt).getBytes()));
+        return DqlDataTool.bytes2HexString(encryptMD5((data + salt).getBytes()));
     }
 
     /**
@@ -109,7 +105,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptMD5ToString(byte[] data) {
-        return bytes2HexString(encryptMD5(data));
+        return DqlDataTool.bytes2HexString(encryptMD5(data));
     }
 
     /**
@@ -123,7 +119,7 @@ public class DqlEncryptTool {
         byte[] dataSalt = new byte[data.length + salt.length];
         System.arraycopy(data, 0, dataSalt, 0, data.length);
         System.arraycopy(salt, 0, dataSalt, data.length, salt.length);
-        return bytes2HexString(encryptMD5(dataSalt));
+        return DqlDataTool.bytes2HexString(encryptMD5(dataSalt));
     }
 
     /**
@@ -163,7 +159,7 @@ public class DqlEncryptTool {
      * @return 文件的16进制密文
      */
     public static String encryptMD5File2String(File file) {
-        return encryptMD5File(file) != null ? bytes2HexString(encryptMD5File(file)) : "";
+        return encryptMD5File(file) != null ? DqlDataTool.bytes2HexString(encryptMD5File(file)) : "";
     }
 
     /**
@@ -206,7 +202,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptSHA1ToString(byte[] data) {
-        return bytes2HexString(encryptSHA1(data));
+        return DqlDataTool.bytes2HexString(encryptSHA1(data));
     }
 
     /**
@@ -236,7 +232,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptSHA224ToString(byte[] data) {
-        return bytes2HexString(encryptSHA224(data));
+        return DqlDataTool.bytes2HexString(encryptSHA224(data));
     }
 
     /**
@@ -266,7 +262,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptSHA256ToString(byte[] data) {
-        return bytes2HexString(encryptSHA256(data));
+        return DqlDataTool.bytes2HexString(encryptSHA256(data));
     }
 
     /**
@@ -298,7 +294,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptSHA384ToString(byte[] data) {
-        return bytes2HexString(encryptSHA384(data));
+        return DqlDataTool.bytes2HexString(encryptSHA384(data));
     }
 
     /**
@@ -328,7 +324,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptSHA512ToString(byte[] data) {
-        return bytes2HexString(encryptSHA512(data));
+        return DqlDataTool.bytes2HexString(encryptSHA512(data));
     }
 
     /**
@@ -390,7 +386,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptDES2HexString(byte[] data, byte[] key) {
-        return bytes2HexString(encryptDES(data, key));
+        return DqlDataTool.bytes2HexString(encryptDES(data, key));
     }
 
     /************************ 3DES加密相关 ***********************/
@@ -415,7 +411,7 @@ public class DqlEncryptTool {
      * @return 明文
      */
     public static byte[] decryptHexStringDES(String data, byte[] key) {
-        return decryptDES(hexString2Bytes(data), key);
+        return decryptDES(DqlDataTool.hexString2Bytes(data), key);
     }
 
     /**
@@ -439,7 +435,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encrypt3DES2HexString(byte[] data, byte[] key) {
-        return bytes2HexString(encrypt3DES(data, key));
+        return DqlDataTool.bytes2HexString(encrypt3DES(data, key));
     }
 
     /**
@@ -464,7 +460,7 @@ public class DqlEncryptTool {
      * @return 明文
      */
     public static byte[] decryptHexString3DES(String data, byte[] key) {
-        return decrypt3DES(hexString2Bytes(data), key);
+        return decrypt3DES(DqlDataTool.hexString2Bytes(data), key);
     }
 
     /**
@@ -487,7 +483,7 @@ public class DqlEncryptTool {
      * @return 16进制密文
      */
     public static String encryptAES2HexString(byte[] data, byte[] key) {
-        return bytes2HexString(encryptAES(data, key));
+        return DqlDataTool.bytes2HexString(encryptAES(data, key));
     }
 
     /**

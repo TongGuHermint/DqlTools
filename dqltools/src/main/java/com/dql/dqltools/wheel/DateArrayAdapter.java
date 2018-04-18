@@ -1,4 +1,4 @@
-package com.example.dqltools.wheel;
+package com.dql.dqltools.wheel;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,7 +10,7 @@ import android.widget.TextView;
  * @author dql
  * @date 2018/4/12
  */
-public class DateNumericAdapter extends NumericWheelAdapter {
+public class DateArrayAdapter extends ArrayWheelAdapter<String> {
 	// Index of current item
 	int currentItem;
 	// Index of item to be highlighted
@@ -19,9 +19,8 @@ public class DateNumericAdapter extends NumericWheelAdapter {
 	/**
 	 * Constructor
 	 */
-	public DateNumericAdapter(Context context, int minValue, int maxValue,
-							  int current) {
-		super(context, minValue, maxValue);
+	public DateArrayAdapter(Context context, String[] items, int current) {
+		super(context, items);
 		this.currentValue = current;
 		setTextSize(16);
 	}

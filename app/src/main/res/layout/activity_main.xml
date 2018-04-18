@@ -9,13 +9,26 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:orientation="vertical">
     <Button
         android:layout_gravity="center"
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="选择日期"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定取消"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"/>
 </LinearLayout>
 
 

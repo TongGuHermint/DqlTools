@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -24,11 +24,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.example.dqltools.DqlTools.DqlFileTool.getDataColumn;
-import static com.example.dqltools.DqlTools.DqlFileTool.isDownloadsDocument;
-import static com.example.dqltools.DqlTools.DqlFileTool.isExternalStorageDocument;
-import static com.example.dqltools.DqlTools.DqlFileTool.isGooglePhotosUri;
-import static com.example.dqltools.DqlTools.DqlFileTool.isMediaDocument;
+import static com.dql.dqltools.DqlTools.DqlFileTool.getDataColumn;
+import static com.dql.dqltools.DqlTools.DqlFileTool.isDownloadsDocument;
+import static com.dql.dqltools.DqlTools.DqlFileTool.isExternalStorageDocument;
+import static com.dql.dqltools.DqlTools.DqlFileTool.isGooglePhotosUri;
+import static com.dql.dqltools.DqlTools.DqlFileTool.isMediaDocument;
 
 
 /**

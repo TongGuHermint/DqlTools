@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.content.Context;
 import android.util.Log;

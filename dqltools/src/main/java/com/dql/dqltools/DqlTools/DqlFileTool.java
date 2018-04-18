@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -58,8 +58,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
-
-import static com.example.dqltools.DqlTools.DqlConstTool.KB;
 
 
 //import android.util.Log;
@@ -1357,9 +1355,9 @@ public class DqlFileTool {
         OutputStream os = null;
         try {
             os = new BufferedOutputStream(new FileOutputStream(file, append));
-            byte data[] = new byte[KB];
+            byte data[] = new byte[DqlConstTool.KB];
             int len;
-            while ((len = is.read(data, 0, KB)) != -1) {
+            while ((len = is.read(data, 0, DqlConstTool.KB)) != -1) {
                 os.write(data, 0, len);
             }
             return true;
@@ -1607,9 +1605,9 @@ public class DqlFileTool {
         InputStream is = null;
         try {
             is = new BufferedInputStream(new FileInputStream(file));
-            byte[] buffer = new byte[KB];
+            byte[] buffer = new byte[DqlConstTool.KB];
             int readChars;
-            while ((readChars = is.read(buffer, 0, KB)) != -1) {
+            while ((readChars = is.read(buffer, 0, DqlConstTool.KB)) != -1) {
                 for (int i = 0; i < readChars; ++i) {
                     if (buffer[i] == '\n') ++count;
                 }

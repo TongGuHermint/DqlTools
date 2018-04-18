@@ -1,4 +1,4 @@
-package com.example.dqltools.DqlTools;
+package com.dql.dqltools.DqlTools;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -14,10 +14,10 @@ import android.widget.TextView;
 
 
 import com.example.dqltools.R;
-import com.example.dqltools.wheel.DateArrayAdapter;
-import com.example.dqltools.wheel.NumericWheelAdapter;
-import com.example.dqltools.wheel.OnWheelChangedListener;
-import com.example.dqltools.wheel.WheelView;
+import com.dql.dqltools.wheel.DateArrayAdapter;
+import com.dql.dqltools.wheel.NumericWheelAdapter;
+import com.dql.dqltools.wheel.OnWheelChangedListener;
+import com.dql.dqltools.wheel.WheelView;
 
 import java.util.Calendar;
 

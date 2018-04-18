@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.dql.dqldialogtools.DqlTools.DqlDialogSure;
+import com.example.dql.dqldialogtools.DqlTools.DqlDialogSureCancel;
 import com.example.dql.dqldialogtools.DqlTools.DqlDialogWheelYearMonthDay;
 
 public class MainActivity extends AppCompatActivity {
 	private DqlDialogWheelYearMonthDay mDqlDialogWheelYearMonthDay;
 	private Button button;
+	private Button button1;
+	private Button button2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,7 +28,56 @@ public class MainActivity extends AppCompatActivity {
 				mDqlDialogWheelYearMonthDay.show();
 			}
 		});
+		button1 = (Button)findViewById(R.id.btn1);
+		button1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				initSureCancleDialog();
 
+			}
+		});
+		button2 = (Button)findViewById(R.id.btn2);
+		button2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				initSureDialog();
+			}
+		});
+	}
+
+	private void initSureDialog() {
+		final DqlDialogSure dqlDialogSure = new DqlDialogSure(MainActivity.this);//提示弹窗
+//		rxDialogSure.getLogoView().setImageResource(R.drawable.logo);
+		dqlDialogSure.getTitleView().setText("下载地址");
+		dqlDialogSure.getContentView().setText("https://www.baidu.com");
+		dqlDialogSure.getSureView().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dqlDialogSure.cancel();
+			}
+		});
+		dqlDialogSure.show();
+	}
+
+
+	private void initSureCancleDialog() {
+		final DqlDialogSureCancel dqlDialogSureCancel = new DqlDialogSureCancel(MainActivity.this);
+//				dqlDialogSureCancel.getTitleView().setBackgroundResource(R.drawable.logo);
+		dqlDialogSureCancel.getTitleView().setVisibility(View.GONE);
+		dqlDialogSureCancel.getContentView().setText("退出登陆");
+		dqlDialogSureCancel.getSureView().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dqlDialogSureCancel.cancel();
+			}
+		});
+		dqlDialogSureCancel.getCancelView().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dqlDialogSureCancel.cancel();
+			}
+		});
+		dqlDialogSureCancel.show();
 	}
 
 

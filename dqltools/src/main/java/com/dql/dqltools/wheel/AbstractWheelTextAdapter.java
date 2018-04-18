@@ -1,4 +1,4 @@
-package com.example.dqltools.wheel;
+package com.dql.dqltools.wheel;
 
 import android.content.Context;
 import android.graphics.Typeface;
