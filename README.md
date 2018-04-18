@@ -19,37 +19,71 @@ dependencies {
 ```
 
 ## How to use
-
+###日期选择器
 ```
 // --------------------------------选择日期开始
 mDqlDialogWheelYearMonthDay = new DqlDialogWheelYearMonthDay(this, 1994, 2017);
 mDqlDialogWheelYearMonthDay.getSureView().setOnClickListener(
-		new View.OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				if (mDqlDialogWheelYearMonthDay.getCheckBoxDay().isChecked()) {
-					btnDateDialog.setText(
-						mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
-							+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月"
-							+ mDqlDialogWheelYearMonthDay.getSelectorDay() + "日");
-				} else {
-					btnDateDialog.setText(
-						mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
-						+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月");
-						}
-					mDqlDialogWheelYearMonthDay.cancel();
-				}
-				});
-mDqlDialogWheelYearMonthDay.getCancleView().setOnClickListener(
-		new View.OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
+	new View.OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+			if (mDqlDialogWheelYearMonthDay.getCheckBoxDay().isChecked()) {
+				btnDateDialog.setText(
+				mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
+					+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月"
+					+ mDqlDialogWheelYearMonthDay.getSelectorDay() + "日");
+			} else {
+				btnDateDialog.setText(
+					mDqlDialogWheelYearMonthDay.getSelectorYear() + "年"
+					+ mDqlDialogWheelYearMonthDay.getSelectorMonth() + "月");
+					}
 				mDqlDialogWheelYearMonthDay.cancel();
-				}
-		});
+			}
+			});
+mDqlDialogWheelYearMonthDay.getCancleView().setOnClickListener(
+	new View.OnClickListener() {
+
+	@Override
+	public void onClick(View arg0) {
+		mDqlDialogWheelYearMonthDay.cancel();
+		}
+	});
 //--------------------------------选择日期结束
+
+```
+###确定弹框
+```
+DqlDialogSure dqlDialogSure = new DqlDialogSure(MainActivity.this);//提示弹窗
+dqlDialogSure.getTitleView().setText("下载地址");
+dqlDialogSure.getContentView().setText("https://www.baidu.com");
+dqlDialogSure.getSureView().setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		dqlDialogSure.cancel();
+	}
+});
+dqlDialogSure.show();
+}
+
+```
+###确定取消弹框
+```
+DqlDialogSureCancel dqlDialogSureCancel = new DqlDialogSureCancel(MainActivity.this);
+dqlDialogSureCancel.getTitleView().setVisibility(View.GONE);
+dqlDialogSureCancel.getContentView().setText("退出登陆");
+dqlDialogSureCancel.getSureView().setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		dqlDialogSureCancel.cancel();
+	}
+});
+dqlDialogSureCancel.getCancelView().setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		dqlDialogSureCancel.cancel();
+	}
+});
+dqlDialogSureCancel.show();
 
 ```
 ## PS
