@@ -14,7 +14,7 @@ Gradle:
 ```
 ```
 dependencies {
-	        compile 'com.github.TongGuHermint:DqlTools:v1.0.2.1'
+	        compile 'com.github.TongGuHermint:DqlTools:v1.0.3'
 	}
 ```
 
