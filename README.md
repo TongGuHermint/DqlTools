@@ -82,9 +82,15 @@ dqlDialogSureCancel.getCancelView().setOnClickListener(new View.OnClickListener(
 dqlDialogSureCancel.show();
 
 ```
+等待弹框
+```
+DqlDialogLoading dqlDialogLoading = new DqlDialogLoading(MainActivity.this);
+dqlDialogLoading.show();
+
+```
 ## PS
 :heartpulse:提示
 ```
-目前只有日期选择器，确定弹框，确定取消弹框其他功能会逐步完善。
+目前只有日期选择器，确定弹框，确定取消弹框，等待弹框其他功能会逐步完善。
 
 ```
