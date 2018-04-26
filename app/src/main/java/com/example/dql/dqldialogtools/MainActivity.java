@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.dql.dqldialogtools.DqlTools.DqlDialogLoading;
 import com.example.dql.dqldialogtools.DqlTools.DqlDialogSure;
 import com.example.dql.dqldialogtools.DqlTools.DqlDialogSureCancel;
 import com.example.dql.dqldialogtools.DqlTools.DqlDialogWheelYearMonthDay;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 	private Button button;
 	private Button button1;
 	private Button button2;
+	private Button button3;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,6 +45,18 @@ public class MainActivity extends AppCompatActivity {
 				initSureDialog();
 			}
 		});
+		button3 = (Button)findViewById(R.id.btn3);
+		button3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				initLoadingDialog();
+			}
+		});
+	}
+
+	private void initLoadingDialog() {
+		DqlDialogLoading dqlDialogLoading = new DqlDialogLoading(MainActivity.this);
+		dqlDialogLoading.show();
 	}
 
 	private void initSureDialog() {
